@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2025-05-22T21:44:37.006Z",
+      "amount": "1.00",
+      "description": "11",
+      "type": "revenus",
+      "userId": 1,
+      "recipient": null
+    },
+    {
+      "id": 2,
+      "date": "2025-05-22T21:45:16.285Z",
+      "amount": "11",
+      "description": "1111",
+      "type": "revenus",
+      "userId": 1,
+      "recipient": "111"
+    },
+    {
+      "id": 3,
+      "date": "2025-05-22T21:49:10.443Z",
+      "amount": "11",
+      "description": "1",
+      "type": "dépenses",
+      "userId": 1,
+      "recipient": null
+    },
+    {
+      "id": 4,
+      "date": "2025-05-22T21:53:55.937Z",
+      "amount": "1",
+      "description": "1",
+      "type": "revenus",
+      "userId": 1,
+      "recipient": null
+    },
+    {
+      "id": 5,
+      "date": "2025-05-22T22:12:29.014Z",
+      "amount": "1",
+      "description": "1",
+      "type": "investissement",
+      "userId": 1,
+      "recipient": null
+    }
+  ],
+  "settings": {
+    "theme": "dark"
+  }
+}
