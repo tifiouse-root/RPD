@@ -11,7 +11,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Chemin vers le fichier JSON
-const DATA_FILE_PATH = path.join(__dirname, 'data', 'transactions.json');
+const DATA_FILE_PATH = process.env.NODE_ENV === 'production' 
+  ? '/tmp/transactions.json'
+  : path.join(__dirname, 'data', 'transactions.json');
 
 // Interface pour les données stockées dans le JSON
 interface JsonData {
@@ -24,6 +26,11 @@ interface JsonData {
 // Fonction pour lire les données JSON
 function readJsonData(): JsonData {
   try {
+    const dir = path.dirname(DATA_FILE_PATH);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
     if (!fs.existsSync(DATA_FILE_PATH)) {
       // Si le fichier n'existe pas, créer le fichier avec des données par défaut
       const defaultData: JsonData = {
